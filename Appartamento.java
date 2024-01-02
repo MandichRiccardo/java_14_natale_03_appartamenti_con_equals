@@ -104,4 +104,12 @@ public class Appartamento{
         info += "\tvalore:\t" + valore + "\n";
         return info;
     }
+
+    public boolean equals(Appartamento a) {
+        if(a == null) return false;
+        if(this.mq != a.mq) return false;
+        if(this.classeEnergetica != a.classeEnergetica) return false;
+        if(this.pregiato != a.pregiato) return false;
+        return true;
+    }
 }

@@ -11,6 +11,7 @@ public class Test{
         output += "3)\tper usare il costruttore di copia\n";
         output += "4)\tper cambiare l'appartamento su cui si sta lavorando\n";
         output += "5)\tper dare valore ai campi che ancora non lo hanno\n";
+        output += "6)\tper vedere se è uguale ad un'altro appartamento\n";
         Appartamento[] a = new Appartamento[getInt("quanti sono gli appartamenti totali su cui potrò lavorare?", scan)];
         int i=0;
         while(running){
@@ -66,6 +67,12 @@ public class Test{
                         }
                         a[i].setValore();
                     }
+                case 6:
+                    System.out.println("i due appartamenti ");
+                    if(!a[getInt("inserisci il numero dell'appartamento con il quale lo vuoi confrontare", scan)].equals(a[i])){
+                        System.out.println("non ");
+                    }
+                    System.out.println("sono uguali");
             }
             for(int j=0;j<a.length;j++){
                 System.out.println("appartamento " + j + ":");
